@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Saludo from './components/Saludo';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <p>
           Ecommerce del C.D.R.E
         </p>
-
+      <Saludo name='Sofia' edad={27}/>
       </header>
     </div>
   );
