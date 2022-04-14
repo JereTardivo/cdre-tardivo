@@ -13,7 +13,7 @@ function App() {
         <p>
           Ecommerce del C.D.R.E
         </p>
-      <Saludo name='Sofia' edad={27}/>
+      <Saludo name='Jere' edad={29}/>
       </header>
     </div>
   );
