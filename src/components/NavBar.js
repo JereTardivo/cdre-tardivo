@@ -15,18 +15,18 @@ const NavBar = () => {
                 <div class="dropdown dropdown-end">
                     <label tabindex="0" class="btn btn-ghost btn-circle avatar">
                         <div class="w-10 rounded-full">
-                            <img  src="https://github.com/JereTardivo/cdre-tardivo/blob/main/public/PROFILE.jpg" alt="Perfil" />
+                            <img  href="https://github.com/JereTardivo/cdre-tardivo/blob/main/public/PROFILE.jpg" alt="Perfil" />
                         </div>
                     </label>
                     <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li>
                             <a href="/#" class="justify-between">
-                                Profile
-                                <span class="badge">New</span>
+                                Perfil
+                                <span class="badge">Nuevo</span>
                             </a>
                         </li>
-                        <li><a href="/#">Settings</a></li>
-                        <li><a href="/#">Logout</a></li>
+                        <li><a href="/#">Configuración</a></li>
+                        <li><a href="/#">Cerrar Sesión</a></li>
                     </ul>
                 </div>
             </div>
