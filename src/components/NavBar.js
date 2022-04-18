@@ -5,12 +5,9 @@ const NavBar = () => {
 
         <div class="navbar bg-base-100">
             <div class="flex-1">
-                <a class="btn btn-ghost normal-case text-xl">
-                    <p>
-                        Club Deportivo y Recreativo
-                        <br />
-                        Elenense
-                    </p>
+                <a href="/#" class="btn btn-ghost normal-case text-xl">
+                    <p>Elenense</p>
+
                 </a>
             </div>
             <div class="flex-none">
@@ -18,18 +15,18 @@ const NavBar = () => {
                 <div class="dropdown dropdown-end">
                     <label tabindex="0" class="btn btn-ghost btn-circle avatar">
                         <div class="w-10 rounded-full">
-                            <img src="https://api.lorem.space/image/face?hash=33791" />
+                            <img  src="https://github.com/JereTardivo/cdre-tardivo/blob/main/public/PROFILE.jpg" alt="Perfil" />
                         </div>
                     </label>
                     <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li>
-                            <a class="justify-between">
+                            <a href="/#" class="justify-between">
                                 Profile
                                 <span class="badge">New</span>
                             </a>
                         </li>
-                        <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
+                        <li><a href="/#">Settings</a></li>
+                        <li><a href="/#">Logout</a></li>
                     </ul>
                 </div>
             </div>
