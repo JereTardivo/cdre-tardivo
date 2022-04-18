@@ -5,10 +5,16 @@ const NavBar = () => {
 
         <div class="navbar bg-base-100">
             <div class="flex-1">
-                <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <a class="btn btn-ghost normal-case text-xl">
+                    <p>
+                        Club Deportivo y Recreativo
+                        <br />
+                        Elenense
+                    </p>
+                </a>
             </div>
             <div class="flex-none">
-                <CartWidget/>
+                <CartWidget />
                 <div class="dropdown dropdown-end">
                     <label tabindex="0" class="btn btn-ghost btn-circle avatar">
                         <div class="w-10 rounded-full">
