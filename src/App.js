@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
+import Contador from './components/Contador';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
-      <NavBar/>
-      
+      <NavBar />
+
       <header className="App-header">
-        
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="text-3xl font-bold underline">
-          Proximamente
-        </h1>
-        <p>
-          Ecommerce del C.D.R.E
-        </p>
-        
+        <ItemListContainer itemDescription='Remera Titular' price={3000} />
       </header>
+      <body>
+        <Contador></Contador>
+      </body>
+
+
     </div>
   );
 }
