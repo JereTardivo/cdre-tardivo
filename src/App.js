@@ -1,7 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import Contador from './components/Contador';
 import ItemListContainer from './components/ItemListContainer';
+import ItemCount from './components/ItemCount';
 
 function App() {
   return (
@@ -10,12 +10,9 @@ function App() {
 
       <header className="App-header">
         <ItemListContainer itemDescription='Remera Titular' price={3000} />
+        
       </header>
-      <body>
-        <Contador></Contador>
-      </body>
-
-
+      <ItemCount Stock={10}></ItemCount>
     </div>
   );
 }

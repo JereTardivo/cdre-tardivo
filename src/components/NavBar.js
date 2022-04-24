@@ -3,33 +3,33 @@ import CartWidget from "./CartWidget"
 const NavBar = () => {
     return (
 
-        <div class="navbar bg-base-100">
+        <div className="navbar bg-base-100">
 
-            <div class="navbar-start">
-                <div class="dropdown">
-                    <label tabindex="0" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <label tabIndex="0" className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><a href="/#">Nuestra Historia</a></li>
-                        <li tabindex="0">
+                        <li tabIndex="0">
                             <a href="/#">
                                 Disciplinas
-                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+                                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                             </a>
-                            <ul class="p-2">
+                            <ul className="p-2">
                                 <li><a href="/#">Futbol Masculino</a></li>
                                 <li><a href="/#">Futbol Femenino</a></li>
                                 <li><a href="/#">Hockey</a></li>
                                 <li><a href="/#">Bochas</a></li>
                             </ul>
                         </li>
-                        <li tabindex="0">
+                        <li tabIndex="0">
                             <a href="/#">
                                 Shop
-                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+                                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                             </a>
-                            <ul class="p-2">
+                            <ul className="p-2">
                                 <li><a href="/#">Camisetas</a></li>
                                 <li><a href="/#">Conjuntos</a></li>
                                 <li><a href="/#">Merchandising</a></li>
@@ -38,31 +38,31 @@ const NavBar = () => {
                         <li><a href="/#">Contacto</a></li>
                     </ul>
                 </div>
-                <a href="/#" class="btn btn-ghost normal-case text-xl">
+                <a href="/#" className="btn btn-ghost normal-case text-xl">
                     <p>Elenense</p>
                 </a>
             </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal p-0">
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal p-0">
                     <li><a href="/#">Nuestra Historia</a></li>
-                    <li tabindex="0">
+                    <li tabIndex="0">
                         <a href="/#">
                             Disciplinas
-                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+                            <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                         </a>
-                        <ul class="p-2">
+                        <ul className="p-2">
                             <li><a href="/#">Futbol Masculino</a></li>
                             <li><a href="/#">Futbol Femenino</a></li>
                             <li><a href="/#">Hockey</a></li>
                             <li><a href="/#">Bochas</a></li>
                         </ul>
                     </li>
-                    <li tabindex="0">
+                    <li tabIndex="0">
                         <a href="/#">
                             Shop
-                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+                            <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                         </a>
-                        <ul class="p-2">
+                        <ul className="p-2">
                             <li><a href="/#">Camisetas</a></li>
                             <li><a href="/#">Conjuntos</a></li>
                             <li><a href="/#">Merchandising</a></li>
@@ -71,20 +71,20 @@ const NavBar = () => {
                     <li><a href="/#">Contacto</a></li>
                 </ul>
             </div>
-            <div class="navbar-end">
+            <div className="navbar-end">
 
                 <CartWidget />
-                <div class="dropdown dropdown-end">
-                    <label tabindex="0" class="btn btn-ghost btn-rounded avatar">
-                        <div class="w-10 rounded-full">
+                <div className="dropdown dropdown-end">
+                    <label tabIndex="0" className="btn btn-ghost btn-rounded avatar">
+                        <div className="w-10 rounded-full">
                             <img src="https://api.lorem.space/image/face?hash=55350" alt="Perfil" />
                         </div>
                     </label>
-                    <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li>
-                            <a href="/#" class="justify-between">
+                            <a href="/#" className="justify-between">
                                 Perfil
-                                <span class="badge">Nuevo</span>
+                                <span className="badge">Nuevo</span>
                             </a>
                         </li>
                         <li><a href="/#">Configuración</a></li>
