@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import CartWidget from "./CartWidget"
 
 const NavBar = () => {
@@ -11,83 +12,76 @@ const NavBar = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a href="/#">Nuestra Historia</a></li>
+                        <li><Link to={'/nuestra-historia'}>Nuestra Historia</Link></li>
                         <li tabIndex="0">
-                            <a href="/#">
-                                Disciplinas
-                                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-                            </a>
+                            <label>Disciplinas</label>
                             <ul className="p-2">
-                                <li><a href="/#">Futbol Masculino</a></li>
-                                <li><a href="/#">Futbol Femenino</a></li>
-                                <li><a href="/#">Hockey</a></li>
-                                <li><a href="/#">Bochas</a></li>
+                                <li><a href="/#"><Link to={'/futbol-masculino'}>Futbol Masculino</Link></a></li>
+                                <li><a href="/#"><Link to={'/futbol-femenino'}>Futbol Femenino</Link></a></li>
+                                <li><a href="/#"><Link to={'/hockey'}>Hockey</Link></a></li>
+                                <li><a href="/#"><Link to={'/bochas'}>Bochas</Link></a></li>
                             </ul>
                         </li>
                         <li tabIndex="0">
-                            <a href="/#">
-                                Shop
-                                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-                            </a>
+                            <label>Shop</label>
                             <ul className="p-2">
-                                <li><a href="/#">Camisetas</a></li>
-                                <li><a href="/#">Conjuntos</a></li>
-                                <li><a href="/#">Merchandising</a></li>
+                                <li><a href="/#"><Link to={'/camisetas'}>Camisetas</Link></a></li>
+                                <li><a href="/#"><Link to={'/conjuntos'}>Conjuntos</Link></a></li>
+                                <li><a href="/#"><Link to={'/merchandaising'}>Merchandising</Link></a></li>
                             </ul>
                         </li>
-                        <li><a href="/#">Contacto</a></li>
+                        <li><a href="/#"><Link to={'/contacto'}>Contacto</Link></a></li>
                     </ul>
                 </div>
                 <a href="/#" className="btn btn-ghost normal-case text-xl">
+                    <label tabIndex="0" className="avatar">
+                        <div className="w-10 rounded-full">
+                            <img src="https://i.ibb.co/0Mgrbr9/ESCUDO-PNG.png" alt="ESCUDO-PNG" border="0" />
+                        </div>
+                    </label>
                     <p>Elenense</p>
                 </a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
-                    <li><a href="/#">Nuestra Historia</a></li>
+                    <li><Link to={'/nuestra-historia'}>Nuestra Historia</Link></li>
                     <li tabIndex="0">
-                        <a href="/#">
-                            Disciplinas
-                            <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-                        </a>
+                        <label>Disciplinas</label>
                         <ul className="p-2">
-                            <li><a href="/#">Futbol Masculino</a></li>
-                            <li><a href="/#">Futbol Femenino</a></li>
-                            <li><a href="/#">Hockey</a></li>
-                            <li><a href="/#">Bochas</a></li>
+                            <li><a href="/#"><Link to={'/futbol-masculino'}>Futbol Masculino</Link></a></li>
+                            <li><a href="/#"><Link to={'/futbol-femenino'}>Futbol Femenino</Link></a></li>
+                            <li><a href="/#"><Link to={'/hockey'}>Hockey</Link></a></li>
+                            <li><a href="/#"><Link to={'/bochas'}>Bochas</Link></a></li>
                         </ul>
                     </li>
                     <li tabIndex="0">
-                        <a href="/#">
-                            Shop
-                            <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-                        </a>
+                        <label>Shop</label>
                         <ul className="p-2">
-                            <li><a href="/#">Camisetas</a></li>
-                            <li><a href="/#">Conjuntos</a></li>
-                            <li><a href="/#">Merchandising</a></li>
+                            <li><a href="/#"><Link to={'/camisetas'}>Camisetas</Link></a></li>
+                            <li><a href="/#"><Link to={'/conjuntos'}>Conjuntos</Link></a></li>
+                            <li><a href="/#"><Link to={'/merchandaising'}>Merchandising</Link></a></li>
                         </ul>
                     </li>
-                    <li><a href="/#">Contacto</a></li>
+                    <li><a href="/#"><Link to={'/contacto'}>Contacto</Link></a></li>
                 </ul>
             </div>
             <div className="navbar-end">
-
                 <CartWidget />
                 <div className="dropdown dropdown-end">
                     <label tabIndex="0" className="btn btn-ghost btn-rounded avatar">
                         <div className="w-10 rounded-full">
-                            <img src="https://api.lorem.space/image/face?hash=55350" alt="Perfil" />
+
+                            <img src="https://i.ibb.co/pLCkqhj/PROFILE.jpg" alt="PROFILE" border="0" />
+
                         </div>
                     </label>
                     <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li>
-                            <a href="/#" className="justify-between">
-                                Perfil
+                            <a href="/#" className="justify-between"><Link to={'/perfil'}>Perfil</Link>
                                 <span className="badge">Nuevo</span>
                             </a>
                         </li>
-                        <li><a href="/#">Configuración</a></li>
+                        <li><a href="/#"><Link to={'/configuracion'}>Configuración</Link></a></li>
                         <li><a href="/#">Cerrar Sesión</a></li>
                     </ul>
                 </div>
