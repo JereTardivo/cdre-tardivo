@@ -1,69 +1,25 @@
-import React from 'react'
-import ItemCount from './ItemCount'
+import { NavLink } from "react-router-dom"
 
-const Item = (props) => {
-
-    const { title, price, pictureUrl, stock } = props.item
-
+const Item = ({ item }) => {
 
     return (
         <>
-            <div className="card card-side bg-base-100 shadow-xl">
-                <figure>
-                    <img src={pictureUrl} alt="itemImage" />
-                </figure>
-                <div className="card-body">
-                    <div className="flex flex-wrap">
-                        <h1 className="flex-auto font-medium text-slate-100">
-                            {title}
-                        </h1>
-                        <div className="w-full flex-none mt-2 order-1 text-3xl font-bold text-violet-600">
-                            $ {price}
+
+            <article className="flex items-start space-x-6 p-6" >
+                <img src={item.pictureUrl} alt="" width="110" height="128" className="flex-none rounded-md bg-slate-100" />
+                <div className="min-w-0 relative flex-auto">
+                    <h2 className="font-semibold text-slate-900 truncate pr-20" style={{color: "white"}}>{item.title}</h2>
+                    <dl className="mt-2 flex flex-wrap text-sm leading-6 font-medium">
+                        <div className="absolute top-0 right-0 flex items-center space-x-1">
+                            <button className="btn btn-primary"><NavLink to={`/category/${item.id}`}>Ver Detalle</NavLink></button>
                         </div>
-                        <div className="text-sm font-medium text-slate-400">
-                            {stock > 0 ? 'En Stock' : 'Sin Stock'}
+                        <div>
+                            <dt className="sr-only">Precio</dt>
+                            <dd className="px-1.5 ring-1 ring-slate-200 rounded">$ {item.price}</dd>
                         </div>
-                    </div>
-                    <div className="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
-                        <div className="space-x-2 flex text-sm font-bold">
-                            <label>
-                                <input className="sr-only peer" name="size" type="radio" value="xs" defaultChecked />
-                                <div className="w-9 h-9 rounded-full flex items-center justify-center text-violet-400 peer-checked:bg-violet-600 peer-checked:text-white">
-                                    XS
-                                </div>
-                            </label>
-                            <label>
-                                <input className="sr-only peer" name="size" type="radio" value="s" />
-                                <div className="w-9 h-9 rounded-full flex items-center justify-center text-violet-400 peer-checked:bg-violet-600 peer-checked:text-white">
-                                    S
-                                </div>
-                            </label>
-                            <label>
-                                <input className="sr-only peer" name="size" type="radio" value="m" />
-                                <div className="w-9 h-9 rounded-full flex items-center justify-center text-violet-400 peer-checked:bg-violet-600 peer-checked:text-white">
-                                    M
-                                </div>
-                            </label>
-                            <label>
-                                <input className="sr-only peer" name="size" type="radio" value="l" />
-                                <div className="w-9 h-9 rounded-full flex items-center justify-center text-violet-400 peer-checked:bg-violet-600 peer-checked:text-white">
-                                    L
-                                </div>
-                            </label>
-                            <label>
-                                <input className="sr-only peer" name="size" type="radio" value="xl" />
-                                <div className="w-9 h-9 rounded-full flex items-center justify-center text-violet-400 peer-checked:bg-violet-600 peer-checked:text-white">
-                                    XL
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                    <ItemCount Stock={stock} />
-                    <p className="text-sm text-slate-500">
-                        Envio Gratis en la Zona
-                    </p>
+                    </dl>
                 </div>
-            </div>
+            </article>
         </>
 
     )

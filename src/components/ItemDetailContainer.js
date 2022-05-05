@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import ItemList from './ItemList'
-import Item from './Item'
 import { ItemsData } from '../data/ItemsData'
+import ItemDetail from './ItemDetail'
 
-const ItemListContainer = () => {
+const ItemDetailContainer = () => {
 
     const [items, setItems] = useState([])
+
 
     useEffect(() => {
         getItems()
@@ -22,8 +22,6 @@ const ItemListContainer = () => {
             setItems(data)
         })
     }
-
-
     return (
         <>
             <div className="divide-y divide-slate-100" style={{
@@ -36,20 +34,13 @@ const ItemListContainer = () => {
                     gridColumn: "2/6",
                     gridRow: 4
                 }}>
-                    <ItemList>
-                        {items.map((item) => (
-                            <Item key={item.id} item={item} />
-                        ))}
-                    </ItemList>
+                    {items.map((item) => (
+                        <ItemDetail key={item.id} item={item} />
+                    ))}
                 </div>
             </div>
-
         </>
     )
 }
 
-export default ItemListContainer
-
-
-
-
+export default ItemDetailContainer
