@@ -8,16 +8,34 @@ import { useParams } from 'react-router-dom'
 const ItemListContainer = () => {
 
     const [items, setItems] = useState([])
+    const { categoryId } = useParams()
+
 
 
     useEffect(() => {
-        getItems()
-    }, [])
+        if (categoryId === undefined) {
+            getItems()
+        } else {
+            getItemsCategory(categoryId)
+        }
+    }, [categoryId])
 
     const getItems = () => {
         const getItemsPromise = new Promise((resolve) => {
             setTimeout(() => {
                 resolve(ItemsData)
+            }, 2000);
+        })
+
+        getItemsPromise.then(data => {
+            setItems(data)
+        })
+    }
+
+    const getItemsCategory = (categoryId) => {
+        const getItemsPromise = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(ItemsData.filter(i => i.category === categoryId))
             }, 2000);
         })
 

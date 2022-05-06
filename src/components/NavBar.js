@@ -24,11 +24,11 @@ const NavBar = () => {
                                 </ul>
                             </li>
                             <li tabIndex="0">
-                                <label>Shop</label>
+                                <label><Link to='/'>Shop</Link></label>
                                 <ul className="p-2">
-                                    <li><a href="/#">Camisetas</a></li>
-                                    <li><a href="/#">Conjuntos</a></li>
-                                    <li><a href="/#">Merchandising</a></li>
+                                    <li><Link to={`/category/Camisetas`} href="/#">Camisetas</Link></li>
+                                    <li><Link to={`/category/Conjuntos`} href="/#">Conjuntos</Link></li>
+                                    <li><Link to={`/category/Merchandising`} href="/#">Merchandising</Link></li>
                                 </ul>
                             </li>
                             <li><a href="/#">Contacto</a></li>
@@ -56,11 +56,11 @@ const NavBar = () => {
                             </ul>
                         </li>
                         <li tabIndex="0">
-                            <label>Shop</label>
+                            <label><Link to='/'>Shop</Link></label>
                             <ul className="p-2">
-                                <li><a href="/#">Camisetas</a></li>
-                                <li><a href="/#">Conjuntos</a></li>
-                                <li><a href="/#">Merchandising</a></li>
+                                <li><Link to={`/category/Camisetas`} href="/#">Camisetas</Link></li>
+                                <li><Link to={`/category/Conjuntos`} href="/#">Conjuntos</Link></li>
+                                <li><Link to={`/category/Merchandising`} href="/#">Merchandising</Link></li>
                             </ul>
                         </li>
                         <li><a href="/#">Contacto</a></li>

@@ -5,17 +5,17 @@ import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
 
-    const { id } = useParams()
+    const { itemId } = useParams()
     const [items, setItems] = useState({})
 
     useEffect(() => {
-        getItem(id)
-    }, [id])
+        getItem(itemId)
+    }, [itemId])
 
-    const getItem = (id) => {
+    const getItem = (itemId) => {
         const getItemsPromise = new Promise((resolve) => {
             setTimeout(() => {
-                resolve(ItemsData.find(i => i.id === id))
+                resolve(ItemsData.find(i => i.id === itemId))
             }, 2000);
         })
 
