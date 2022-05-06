@@ -34,15 +34,13 @@ const NavBar = () => {
                             <li><a href="/#">Contacto</a></li>
                         </ul>
                     </div>
-                    <Link to={`/`}>
-                        <a href="/#" className="btn btn-ghost normal-case text-xl" style={{ color: "white" }}>
-                            <label tabIndex="0" className="avatar">
-                                <div className="w-10 rounded-full">
-                                    <img src="https://i.ibb.co/0Mgrbr9/ESCUDO-PNG.png" alt="ESCUDO-PNG" border="0" />
-                                </div>
-                            </label>
-                            <p>Elenense</p>
-                        </a>
+                    <Link to='/' className="btn btn-ghost normal-case text-xl" style={{ color: "white" }}>
+                        <label tabIndex="0" className="avatar">
+                            <div className="w-10 rounded-full">
+                                <img src="https://i.ibb.co/0Mgrbr9/ESCUDO-PNG.png" alt="ESCUDO-PNG" border="0" />
+                            </div>
+                        </label>
+                        <p>Elenense</p>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">

@@ -3,17 +3,19 @@ import ItemCount from './ItemCount'
 
 const ItemDetail = (props) => {
 
-    const { title, price, pictureUrl, stock } = props.item
+    const {  title, price, pictureUrl, stock } = props.item
+
+   
 
     return (
         <>
-            <div className="card card-side bg-base-content shadow-xl">
+            <div className="card card-side bg-white shadow-xl">
                 <figure>
                     <img src={pictureUrl} alt="itemImage" />
                 </figure>
                 <div className="card-body">
                     <div className="flex flex-wrap">
-                        <h1 className="flex-auto font-medium text-slate-100">
+                        <h1 className="flex-auto font-medium text-slate-100" style={{color: "black", fontSize: 20}}>
                             {title}
                         </h1>
                         <div className="w-full flex-none mt-2 order-1 text-3xl font-bold text-violet-600">

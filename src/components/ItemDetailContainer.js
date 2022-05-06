@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { ItemsData } from '../data/ItemsData'
 import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
 
-    const [items, setItems] = useState([])
-
+    const { id } = useParams()
+    const [items, setItems] = useState({})
 
     useEffect(() => {
-        getItems()
-    }, [])
+        getItem(id)
+    }, [id])
 
-    const getItems = () => {
+    const getItem = (id) => {
         const getItemsPromise = new Promise((resolve) => {
             setTimeout(() => {
-                resolve(ItemsData)
+                resolve(ItemsData.find(i => i.id === id))
             }, 2000);
         })
 
@@ -22,6 +23,8 @@ const ItemDetailContainer = () => {
             setItems(data)
         })
     }
+
+
     return (
         <>
             <div className="divide-y divide-slate-100" style={{
@@ -34,9 +37,8 @@ const ItemDetailContainer = () => {
                     gridColumn: "2/6",
                     gridRow: 4
                 }}>
-                    {items.map((item) => (
-                        <ItemDetail key={item.id} item={item} />
-                    ))}
+                    <ItemDetail key={items.id} item={items} />
+
                 </div>
             </div>
         </>

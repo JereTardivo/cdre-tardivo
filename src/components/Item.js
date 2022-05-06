@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const Item = ({ item }) => {
 
@@ -11,7 +11,7 @@ const Item = ({ item }) => {
                     <h2 className="font-semibold text-slate-900 truncate pr-20" style={{color: "white"}}>{item.title}</h2>
                     <dl className="mt-2 flex flex-wrap text-sm leading-6 font-medium">
                         <div className="absolute top-0 right-0 flex items-center space-x-1">
-                            <button className="btn btn-primary"><NavLink to={`/category/${item.id}`}>Ver Detalle</NavLink></button>
+                             <Link to={`/item/${item.id}`} className="btn btn-primary">Ver Detalle</Link>
                         </div>
                         <div>
                             <dt className="sr-only">Precio</dt>
