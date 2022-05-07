@@ -27,13 +27,13 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-            <div className="divide-y divide-slate-100" style={{
+            <div data-theme="retro" className="divide-y divide-slate-100" style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(6, 1fr)",
                 gridGap: 10,
                 gridAutoRows: "minmax(100, auto)"
             }}>
-                <div style={{
+                <div className="bg-base-100" style={{
                     gridColumn: "2/6",
                     gridRow: 4
                 }}>

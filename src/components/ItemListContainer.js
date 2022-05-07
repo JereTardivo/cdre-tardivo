@@ -44,29 +44,19 @@ const ItemListContainer = () => {
         })
     }
 
-
     return (
         <>
-            <div className="divide-y divide-slate-100" style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(6, 1fr)",
-                gridGap: 10,
-                gridAutoRows: "minmax(100, auto)"
-
-            }}>
-                <div style={{
-                    gridColumn: "2/6",
-                    gridRow: 14,
-                    border: "solid 1px white"
-                }}>
-                    <ItemList>
-                        {items.map((item) => (
-                            <Item key={item.id} item={item} />
-                        ))}
-                    </ItemList>
+            <div data-theme="retro" className="divide-y divide-slate-100 bg-secondary-content">
+                <div className="bg-base-100">
+                    <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <ItemList>
+                            {items.map((item) => (
+                                <Item key={item.id} item={item} />
+                            ))}
+                        </ItemList>
+                    </div>
                 </div>
             </div>
-
         </>
     )
 }

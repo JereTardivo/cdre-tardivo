@@ -4,22 +4,24 @@ const Item = ({ item }) => {
 
     return (
         <>
-
-            <article className="flex items-start space-x-6 p-6" >
-                <img src={item.pictureUrl} alt="" width="110" height="128" className="flex-none rounded-md bg-slate-100" />
-                <div className="min-w-0 relative flex-auto">
-                    <h2 className="font-semibold text-slate-900 truncate pr-20" style={{color: "white"}}>{item.title}</h2>
-                    <dl className="mt-2 flex flex-wrap text-sm leading-6 font-medium">
-                        <div className="absolute top-0 right-0 flex items-center space-x-1">
-                             <Link to={`/item/${item.id}`} className="btn btn-primary">Ver Detalle</Link>
-                        </div>
-                        <div>
-                            <dt className="sr-only">Precio</dt>
-                            <dd className="px-1.5 ring-1 ring-slate-200 rounded">$ {item.price}</dd>
-                        </div>
-                    </dl>
+            <div className="group relative">
+                <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                    <img src={item.pictureUrl} alt="productImage" className="w-full h-full object-center object-cover lg:w-full lg:h-full" />
                 </div>
-            </article>
+                <div className="mt-4 flex justify-between">
+                    <div>
+                        <h3 className="text-sm text-gray-700">{item.title}</h3>
+                        <p className="mt-1 text-sm text-gray-500">{item.color}</p>
+                    </div>
+                    <p className="text-sm font-medium text-gray-900">$ {item.price}</p>
+                </div>
+                <br></br>
+                <Link to={`/item/${item.id}`} className="btn btn-xs btn-primary">Ver Detalle</Link>
+            </div>
+
+
+
+
         </>
 
     )
