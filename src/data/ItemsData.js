@@ -1,5 +1,5 @@
 export const ItemsData = [
-    { id: "1", sku: "7669", title: "Camisa Lacoste Corte Regular", description: "-", price: "16000", pictureUrl: "https://i.ibb.co/48WvK8N/azul-16000.png", stock: "20", category: "Camisas", brand: "Lacoste", color: "Azul" },
+    { id: "1", sku: "7669", title: "Camisa Lacoste Corte Regular", description: "-", price: "16000", pictureUrl: "https://i.ibb.co/48WvK8N/azul-16000.png", stock: "1", category: "Camisas", brand: "Lacoste", color: "Azul" },
     { id: "2", sku: "5303", title: "Camisa Lacoste Corte Regular", description: "-", price: "16000", pictureUrl: "https://i.ibb.co/jrQPkBQ/azul-marino-16000.png", stock: "20", category: "Camisas", brand: "Lacoste", color: "Azul Marino" },
     { id: "3", sku: "4206", title: "Camisa Lacoste Clasica", description: "-", price: "10400", pictureUrl: "https://i.ibb.co/1RVvBgD/blanco-10400.png", stock: "20", category: "Camisas", brand: "Lacoste", color: "Blanco" },
     { id: "4", sku: "4528", title: "Camisa Lacoste Clasica", description: "-", price: "10400", pictureUrl: "https://i.ibb.co/FzFcyKt/rosa-10400.png", stock: "20", category: "Camisas", brand: "Lacoste", color: "Rosa" },

@@ -1,28 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ItemCount from './ItemCount'
 
-const ItemDetail = (props) => {
+const ItemDetail = ({ item }) => {
 
-    const { title, price, pictureUrl, stock } = props.item
+    const [onCart, setOnCart] = useState(false)
 
-
+    const onAdd = () => {
+        setOnCart(true)
+    }
 
     return (
         <>
             <div className="card card-side bg-white shadow-xl">
                 <figure>
-                    <img src={pictureUrl} alt="itemImage" />
+                    <img src={item.pictureUrl} alt="itemImage" />
                 </figure>
                 <div className="card-body">
                     <div className="flex flex-wrap">
                         <h1 className="flex-auto font-medium text-slate-100" style={{ color: "black", fontSize: 20 }}>
-                            <strong>{title}</strong>
+                            <strong>{item.title}</strong>
                         </h1>
                         <div className="w-full flex-none mt-2 order-1 text-3xl font-bold text-red-600">
-                            $ {price}
+                            $ {item.price}
                         </div>
                         <div className="text-sm font-medium text-slate-400">
-                            {stock > 0 ? 'En Stock' : 'Sin Stock'}
+                            {item.stock > 0 ? 'En Stock' : 'Sin Stock'}
                         </div>
                     </div>
                     <div className="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
@@ -59,8 +61,13 @@ const ItemDetail = (props) => {
                             </label>
                         </div>
                     </div>
-                    <label className="text-xs"> {stock > 1 ? '('+stock+' disponibles)' : '¡Última disponible!' }</label>
-                    <ItemCount Stock={stock} />
+
+                    {onCart ?
+                        <p className={"text-green-600 font-bold"}>¡Producto añadido al Carrito!</p>
+                        : <>
+                            <label className="text-xs"> {item.stock > 1 ? '(' + item.stock + ' disponibles)' : '¡Última disponible!'}</label>
+                            <ItemCount onAdd={onAdd} key={item.id} item={item} />
+                        </>}
                     <p className="text-sm text-slate-500">
                         Envio Gratis en la Zona
                     </p>

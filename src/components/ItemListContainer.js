@@ -46,7 +46,7 @@ const ItemListContainer = () => {
 
     return (
         <>
-            <div data-theme="retro" className="divide-y divide-slate-100 bg-secondary-content">
+            <div className="divide-y divide-slate-100 bg-secondary-content">
                 <div className="bg-base-100">
                     <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
                         <ItemList>

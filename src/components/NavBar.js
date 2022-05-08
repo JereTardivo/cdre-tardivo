@@ -65,11 +65,13 @@ const NavBar = () => {
                                             </ul>
                                         </ul>
                                     </li>
+                                    <li></li>
                                     <li tabIndex="0">
-                                        <a href="/#" className="text-base font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"> Nosotros </a>
+                                        <a href="/#" data-theme="retro" className="bg-white text-base font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"> Nosotros </a>
                                     </li>
+                                    <li></li>
                                     <li tabIndex="0">
-                                        <a href="/#" className="text-base font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"> Contacto </a>
+                                        <a href="/#" data-theme="retro" className="bg-white text-base font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"> Contacto </a>
                                     </li>
                                 </ul>
                             </div>
@@ -113,18 +115,18 @@ const NavBar = () => {
                             </div>
                             <div className="mt-6">
                                 <nav className="grid gap-y-8">
-                                    <a href="/#" className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">                                        
+                                    <a href="/#" className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                                         <span className="ml-3 text-base font-medium text-gray-900"> Shop </span>
                                     </a>
                                     <a href="/#" className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                                         <span className="ml-3 text-base font-medium text-gray-900"> Nosotros </span>
                                     </a>
-                                    <a href="/#" className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">    
+                                    <a href="/#" className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                                         <span className="ml-3 text-base font-medium text-gray-900"> Conacto </span>
-                                    </a>                                   
+                                    </a>
                                 </nav>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>

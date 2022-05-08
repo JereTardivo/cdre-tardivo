@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from 'react'
 
-const ItemCount = (props) => {
+const ItemCount = ({ item, onAdd }) => {
 
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(1)
 
     useEffect(() => {
+
     }, [count])
 
     const addHandler = () => {
-        if ((props.Stock - 1) > 0 && (props.Stock - 1) >= count) {
+        if ((item.stock) > 0 && (item.stock) > count) {
             setCount(count + 1)
         }
     }
 
     const subHandler = () => {
-        if (count > 0) {
+        if (count > 1) {
             setCount(count - 1)
         }
     }
@@ -31,13 +32,12 @@ const ItemCount = (props) => {
                 </button>
             </div>
         </div>
-
         <div className="flex space-x-4 mb-5 text-sm font-medium">
             <div className="flex-auto flex space-x-4">
                 <button className="h-10 px-6 font-semibold rounded-full bg-red-600 text-white" type="submit">
                     Comprar
                 </button>
-                <button className="h-10 px-6 font-semibold rounded-full border border-slate-200 text-slate-900" type="button">
+                <button onClick={onAdd} className="h-10 px-6 font-semibold rounded-full border border-slate-200 text-slate-900" type="button">
                     Añadir al Carrito
                 </button>
             </div>
@@ -47,6 +47,8 @@ const ItemCount = (props) => {
                 </svg>
             </button>
         </div>
+
+
 
 
     </>

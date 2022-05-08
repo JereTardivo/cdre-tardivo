@@ -6,7 +6,7 @@ import ItemDetail from './ItemDetail'
 const ItemDetailContainer = () => {
 
     const { itemId } = useParams()
-    const [items, setItems] = useState({})
+    const [item, setItem] = useState({})
 
     useEffect(() => {
         getItem(itemId)
@@ -20,14 +20,14 @@ const ItemDetailContainer = () => {
         })
 
         getItemsPromise.then(data => {
-            setItems(data)
+            setItem(data)
         })
     }
 
 
     return (
         <>
-            <div data-theme="retro" className="divide-y divide-slate-100" style={{
+            <div className="divide-y divide-slate-100" style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(6, 1fr)",
                 gridGap: 10,
@@ -37,7 +37,7 @@ const ItemDetailContainer = () => {
                     gridColumn: "2/6",
                     gridRow: 4
                 }}>
-                    <ItemDetail key={items.id} item={items} />
+                    <ItemDetail key={item.id} item={item} />
 
                 </div>
             </div>
