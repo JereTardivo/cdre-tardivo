@@ -1,6 +1,12 @@
+
 import { Link } from "react-router-dom"
 
+
 const CartWidget = () => {
+
+
+
+
     return (
         <>
             <div data-theme="retro" className="dropdown dropdown-end bg-white">
@@ -14,8 +20,14 @@ const CartWidget = () => {
                     <div className="card-body">
                         <span className="font-bold text-lg">2 Items</span>
                         <span className="text-success font-bold">Subtotal: $5000</span>
+                        <div>
+                           
+                        </div>
                         <div className="card-actions">
-                            <Link to='/cart' className="btn btn-primary btn-block">Ver Carrito</Link>
+                            <Link to='/cart' className="btn btn-secondary btn-block">Ver Carrito</Link>
+                        </div>
+                        <div className="card-actions">
+                            <button className="btn btn-primary btn-block">Vaciar Carrito</button>
                         </div>
                     </div>
                 </div>

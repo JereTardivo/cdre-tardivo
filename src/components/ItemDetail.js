@@ -1,30 +1,35 @@
-import React, { useState } from 'react'
+
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import ItemCount from './ItemCount'
 
 const ItemDetail = ({ item }) => {
 
+    const { id, title, pictureUrl, price, stock } = item
+
     const [onCart, setOnCart] = useState(false)
 
-    const onAdd = () => {
+    const onAdd = (count) => {
         setOnCart(true)
+        console.log(count)
     }
 
     return (
         <>
             <div className="card card-side bg-white shadow-xl">
                 <figure>
-                    <img src={item.pictureUrl} alt="itemImage" />
+                    <img src={pictureUrl} alt="itemImage" />
                 </figure>
                 <div className="card-body">
                     <div className="flex flex-wrap">
                         <h1 className="flex-auto font-medium text-slate-100" style={{ color: "black", fontSize: 20 }}>
-                            <strong>{item.title}</strong>
+                            <strong>{title}</strong>
                         </h1>
                         <div className="w-full flex-none mt-2 order-1 text-3xl font-bold text-red-600">
-                            $ {item.price}
+                            $ {price}
                         </div>
                         <div className="text-sm font-medium text-slate-400">
-                            {item.stock > 0 ? 'En Stock' : 'Sin Stock'}
+                            {stock > 0 ? 'En Stock' : 'Sin Stock'}
                         </div>
                     </div>
                     <div className="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
@@ -63,10 +68,18 @@ const ItemDetail = ({ item }) => {
                     </div>
 
                     {onCart ?
-                        <p className={"text-green-600 font-bold"}>¡Producto añadido al Carrito!</p>
-                        : <>
-                            <label className="text-xs"> {item.stock > 1 ? '(' + item.stock + ' disponibles)' : '¡Última disponible!'}</label>
-                            <ItemCount onAdd={onAdd} key={item.id} item={item} />
+                        <>
+                            <p className={"text-green-600 font-bold"}>¡Producto añadido al Carrito!</p>
+                            <div className="flex-auto flex space-x-4">
+                                <Link to="/cart" className="h-10 px-6 font-semibold rounded-full bg-red-600 text-white" type="submit">
+                                    Terminar Compra
+                                </Link>
+                            </div>
+                        </>
+                        :
+                        <>
+                            <label className="text-xs"> {stock > 1 ? '(' + item.stock + ' disponibles)' : '¡Última disponible!'}</label>
+                            <ItemCount onAdd={onAdd} stock={stock} id={id} />
                         </>}
                     <p className="text-sm text-slate-500">
                         Envio Gratis en la Zona
@@ -74,6 +87,7 @@ const ItemDetail = ({ item }) => {
                 </div>
             </div>
             <br></br>
+
         </>
     )
 }

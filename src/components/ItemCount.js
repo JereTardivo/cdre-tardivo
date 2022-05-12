@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
+import { useCartContext } from "../context/CartContext"
+import { useAppContext } from "../context/AppContext"
 
-const ItemCount = ({ item, onAdd }) => {
+const ItemCount = ({ stock, onAdd, id }) => {
 
     const [count, setCount] = useState(1)
 
-    useEffect(() => {
-
-    }, [count])
+    const { addToCart } = useCartContext()
+    const { items } = useAppContext()
 
     const addHandler = () => {
-        if ((item.stock) > 0 && (item.stock) > count) {
+        if (stock > 0 && stock > count) {
             setCount(count + 1)
         }
     }
@@ -18,6 +19,17 @@ const ItemCount = ({ item, onAdd }) => {
         if (count > 1) {
             setCount(count - 1)
         }
+    }
+
+    const handleClick = (id, cantidad) => {
+        const findItem = items.find((item) => item.id === id)
+
+        if(!findItem){
+            alert('Error en BD')
+        }
+
+        addToCart(findItem, cantidad)
+        onAdd(count)
     }
 
     return (<>
@@ -34,10 +46,7 @@ const ItemCount = ({ item, onAdd }) => {
         </div>
         <div className="flex space-x-4 mb-5 text-sm font-medium">
             <div className="flex-auto flex space-x-4">
-                <button className="h-10 px-6 font-semibold rounded-full bg-red-600 text-white" type="submit">
-                    Comprar
-                </button>
-                <button onClick={onAdd} className="h-10 px-6 font-semibold rounded-full border border-slate-200 text-slate-900" type="button">
+                <button onClick={() => { handleClick(id, count) }} className="h-10 px-6 font-semibold rounded-full border border-slate-200 text-slate-900" type="button">
                     Añadir al Carrito
                 </button>
             </div>

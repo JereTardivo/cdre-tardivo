@@ -1,29 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { ItemsData } from '../data/ItemsData'
+import { getItem } from '../data/ItemsData'
 import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
 
-    const { itemId } = useParams()
+    const { id } = useParams()
     const [item, setItem] = useState({})
 
     useEffect(() => {
-        getItem(itemId)
-    }, [itemId])
+        if (id === undefined) {
+            getItem().then((resp) => setItem(resp))
+        } else {
+            getItem().then((resp) => setItem(resp[id]))
+        }
 
-    const getItem = (itemId) => {
-        const getItemsPromise = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(ItemsData.find(i => i.id === itemId))
-            }, 2000);
-        })
-
-        getItemsPromise.then(data => {
-            setItem(data)
-        })
-    }
-
+    }, [id])
 
     return (
         <>
@@ -37,7 +29,7 @@ const ItemDetailContainer = () => {
                     gridColumn: "2/6",
                     gridRow: 4
                 }}>
-                    <ItemDetail key={item.id} item={item} />
+                    <ItemDetail item={item} />
 
                 </div>
             </div>
