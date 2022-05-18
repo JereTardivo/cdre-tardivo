@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 
 const Item = ({ item }) => {
 
+
     return (
         <>
             <div className="group relative">
@@ -17,7 +18,9 @@ const Item = ({ item }) => {
                     <p className="text-xl font-medium text-red-500">$ {item.price}</p>
                 </div>
                 <br></br>
-                <Link to={`/item/${item.id}`} data-theme="retro" className="btn btn-xs btn-primary">Ver Detalle</Link>
+                <Link to={`/item/${item.id}`} data-theme="retro" className="btn btn-xs btn-primary">
+                    Ver Detalle
+                </Link>
 
             </div>
 

@@ -1,20 +1,28 @@
+import { collection, getDocs, getFirestore } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { getItem } from '../data/ItemsData'
 import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
 
     const { id } = useParams()
-    const [item, setItem] = useState({})
+    const [item, setItem] = useState()
 
     useEffect(() => {
-        if (id === undefined) {
-            getItem().then((resp) => setItem(resp))
-        } else {
-            getItem().then((resp) => setItem(resp[id]))
-        }
+        const db = getFirestore()
 
+        if (id === undefined) {
+            const itemsCollection = collection(db, "items")
+            getDocs(itemsCollection).then((snapshot) => {
+                setItem(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+            })
+        } else {
+            const itemsCollection = collection(db, "items")
+            getDocs(itemsCollection).then((snapshot) => {
+                const it = snapshot.docs.filter(p => p.id === id)
+                setItem(it.map((doc) => ({ id: doc.id, ...doc.data() })))
+            })
+        }
     }, [id])
 
     return (
@@ -29,7 +37,10 @@ const ItemDetailContainer = () => {
                     gridColumn: "2/6",
                     gridRow: 4
                 }}>
-                    <ItemDetail item={item} />
+                    {item && item.map((item) => (
+                        <ItemDetail key={item.id} item={item} />
+                    ))}
+
 
                 </div>
             </div>

@@ -5,7 +5,7 @@ import ItemCount from './ItemCount'
 
 const ItemDetail = ({ item }) => {
 
-    const { id, title, pictureUrl, price, stock } = item
+    const {id, title, pictureUrl, price, stock } = item
 
     const [onCart, setOnCart] = useState(false)
 

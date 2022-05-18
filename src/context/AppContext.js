@@ -1,5 +1,6 @@
+import { collection, getDocs, getFirestore } from 'firebase/firestore'
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { getItem } from '../data/ItemsData'
+
 
 const AppContext = createContext()
 
@@ -9,7 +10,12 @@ const AppContextProvider = ({ children }) => {
     const [items, setItems] = useState([])
 
     useEffect(() => {
-        getItem().then((resp) => setItems(resp))
+        const db = getFirestore()
+
+        const itemsCollection = collection(db, "items")
+            getDocs(itemsCollection).then((snapshot) => {
+                setItems(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+            })
 
     }, [])
 

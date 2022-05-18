@@ -3,6 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC6HtrHuj-jzpcLM7KwzWyVgLs4otqFrO0",
+  authDomain: "classics-ecommerce.firebaseapp.com",
+  projectId: "classics-ecommerce",
+  storageBucket: "classics-ecommerce.appspot.com",
+  messagingSenderId: "741502190298",
+  appId: "1:741502190298:web:23f48dff041cecab285be3",
+  measurementId: "G-P4NMG8PKB0"
+};
+
+const app = initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
