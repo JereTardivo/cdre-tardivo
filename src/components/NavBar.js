@@ -30,7 +30,7 @@ const NavBar = () => {
                                             <ul className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                                                 <ul className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                                                     <li>
-                                                        <Link to={`/category/Remeras`} href="/#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                                        <Link to={`/category/3`} href="/#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                                                             <img className="flex-shrink-0 h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden="true" src="https://i.ibb.co/Wv2rJBf/remera-Icono-Nav-Bar.png" alt="remera-Icono-Nav-Bar" border="0" />
                                                             <div className="ml-4">
                                                                 <p className="text-base font-medium text-gray-900">Remeras</p>
@@ -38,7 +38,7 @@ const NavBar = () => {
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to={`/category/Camisas`} href="/#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                                        <Link to={`/category/1`} href="/#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                                                             <img className="flex-shrink-0 h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden="true" src="https://i.ibb.co/N3M3q8w/camisa-Icono-Nav-Bar.png" alt="camisa-Icono-Nav-Bar" border="0" />
                                                             <div className="ml-4">
                                                                 <p className="text-base font-medium text-gray-900">Camisas</p>
@@ -46,7 +46,7 @@ const NavBar = () => {
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to={`/category/Sweaters`} href="/#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                                        <Link to={`/category/4`} href="/#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                                                             <img className="flex-shrink-0 h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden="true" src="https://i.ibb.co/PzCyrSh/sweater-Icono-Nav-Bar.png" alt="sweater-Icono-Nav-Bar" border="0" />
                                                             <div className="ml-4">
                                                                 <p className="text-base font-medium text-gray-900">Sweaters</p>
@@ -54,7 +54,7 @@ const NavBar = () => {
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to={`/category/Pantalones`} href="/#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                                        <Link to={`/category/2`} href="/#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                                                             <img className="flex-shrink-0 h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden="true" src="https://i.ibb.co/Q68Qjv2/pantalon-Icono-Nav-Bar.png" alt="pantalon-Icono-Nav-Bar" border="0" />
                                                             <div className="ml-4">
                                                                 <p className="text-base font-medium text-gray-900">Pantalones</p>
