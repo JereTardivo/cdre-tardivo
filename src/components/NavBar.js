@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useCartContext } from '../context/CartContext'
 import CartWidget from './CartWidget'
 
 const NavBar = () => {
+
+    const { cart } = useCartContext()
+    const [cantidad, setCantidad] = useState(0)
+
+    useEffect(() => {
+        let c = 0
+
+        for (let i = 0; i < cart.length; i++) {
+            c = c + cart[i].quantity
+        }
+        setCantidad(c)
+    }, [cart])
+
     return (
         <>
             <div className="relative bg-white" >
@@ -77,7 +91,9 @@ const NavBar = () => {
                             </div>
                         </nav>
                         <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                            <CartWidget />
+                            {cantidad !== 0 ?
+                                <CartWidget />
+                                : <></>}
                             <div className="dropdown dropdown-end">
                                 <label tabIndex="0" className="btn btn-ghost btn-rounded avatar">
                                     <div className="w-10 rounded-full">
