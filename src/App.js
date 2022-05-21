@@ -6,6 +6,8 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import CartContextProvider from './context/CartContext';
 import AppContextProvider from './context/AppContext';
 import CartList from './components/CartList';
+import Footer from './components/Footer';
+
 
 
 function App() {
@@ -21,8 +23,9 @@ function App() {
             <Route path="/" element={<ItemListContainer greetings={"Classics."} />}></Route>
             <Route path="/category/:categoryId" element={<ItemListContainer greetings={"Classics."} />}></Route>
             <Route path="/item/:id" element={<ItemDetailContainer />}></Route>
-            <Route path="/cart" element={<CartList />}></Route>            
+            <Route path="/cart" element={<CartList />}></Route>           
           </Routes>
+          <Footer></Footer>
         </BrowserRouter>
       </CartContextProvider>
     </AppContextProvider>

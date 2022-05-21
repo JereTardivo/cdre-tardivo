@@ -36,12 +36,9 @@ const ItemListContainer = ({ greetings }) => {
                     </div>
                 </div>
             </div>
-            <div className="divide-y divide-slate-100 bg-secondary-content">
-                <div className="bg-base-100">
-
-                    <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                        <ItemList category={category} />
-                    </div>
+            <div className="bg-auto" style={{ backgroundImage: `url(https://i.ibb.co/c1xgRLw/LADRILLOSNEGROS.png)` }}>
+                <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8 ">
+                    <ItemList category={category} />
                 </div>
             </div>
 

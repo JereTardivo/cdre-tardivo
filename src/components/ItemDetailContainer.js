@@ -27,24 +27,24 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-            <div className="divide-y divide-slate-100" style={{
+            <div className="divide-y divide-slate-100 bg-auto" style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(6, 1fr)",
                 gridGap: 10,
-                gridAutoRows: "minmax(100, auto)"
+                gridAutoRows: "minmax(100, auto)",
+                backgroundImage: `url(https://i.ibb.co/c1xgRLw/LADRILLOSNEGROS.png)`
             }}>
-                <div className="bg-base-100" style={{
+                <div style={{
                     gridColumn: "2/6",
                     gridRow: 4
                 }}>
                     {item && item.map((item) => (
                         <ItemDetail key={item.id} item={item} />
                     ))}
-
-
                 </div>
             </div>
         </>
+
     )
 }
 

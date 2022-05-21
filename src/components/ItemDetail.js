@@ -82,7 +82,7 @@ const ItemDetail = ({ item }) => {
                             <ItemCount onAdd={onAdd} stock={stock} id={id} />
                         </>}
                     <p className="text-sm text-slate-500">
-                        Envio Gratis en la Zona
+                        Envio Gratis a todo el Pais
                     </p>
                 </div>
             </div>
