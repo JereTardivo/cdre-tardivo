@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../context/CartContext'
-import CartWidget from './CartWidget'
+import CartWidget from './Shop/Cart/CartWidget'
 
 const NavBar = () => {
 
@@ -81,11 +81,11 @@ const NavBar = () => {
                                     </li>
                                     <li></li>
                                     <li tabIndex="0">
-                                        <a href="/#" data-theme="retro" className="bg-white text-base font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"> Nosotros </a>
+                                        <Link to={`/us`} href="/#" data-theme="retro" className="bg-white text-base font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"> Nosotros </Link>
                                     </li>
                                     <li></li>
                                     <li tabIndex="0">
-                                        <a href="/#" data-theme="retro" className="bg-white text-base font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"> Contacto </a>
+                                        <Link to={`/contact`}  href="/#" data-theme="retro" className="bg-white text-base font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"> Contacto </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -106,7 +106,6 @@ const NavBar = () => {
                                             <span className="badge">Nuevo</span>
                                         </a>
                                     </li>
-                                    <li><a href="/#">Configuración</a></li>
                                     <li><a href="/#">Cerrar Sesión</a></li>
                                 </ul>
                             </div>
@@ -134,12 +133,12 @@ const NavBar = () => {
                                     <a href="/#" className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                                         <span className="ml-3 text-base font-medium text-gray-900"> Shop </span>
                                     </a>
-                                    <a href="/#" className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                                    <Link to={`/us`} href="/#" className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                                         <span className="ml-3 text-base font-medium text-gray-900"> Nosotros </span>
-                                    </a>
-                                    <a href="/#" className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                                    </Link>
+                                    <Link to={`/contact`}  href="/#" className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                                         <span className="ml-3 text-base font-medium text-gray-900"> Conacto </span>
-                                    </a>
+                                    </Link>
                                 </nav>
                             </div>
                         </div>

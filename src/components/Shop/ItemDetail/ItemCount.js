@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { useCartContext } from "../context/CartContext"
-import { useAppContext } from "../context/AppContext"
+import { useCartContext } from "../../../context/CartContext"
+import { useAppContext } from "../../../context/AppContext"
 
 const ItemCount = ({ stock, onAdd, id }) => {
 
