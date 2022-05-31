@@ -9,6 +9,7 @@ import CartList from './components/Shop/Cart/CartList';
 import Footer from './components/Footer';
 import OurCompany from './components/Us/OurCompany'
 import ContactForm from './components/Contact/ContactForm'
+import Sale from './components/Shop/Order/Sale';
 
 
 
@@ -27,7 +28,8 @@ function App() {
             <Route path="/item/:id" element={<ItemDetailContainer />}></Route>
             <Route path="/cart" element={<CartList />}></Route>  
             <Route path="/us" element={<OurCompany />}></Route> 
-            <Route path="/contact" element={<ContactForm />}></Route>          
+            <Route path="/contact" element={<ContactForm />}></Route>   
+            <Route path="/sale" element={<Sale />}></Route>        
           </Routes>
           <Footer></Footer>
         </BrowserRouter>

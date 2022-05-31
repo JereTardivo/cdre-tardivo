@@ -1,6 +1,19 @@
 # Proyecto realizado para el curso de ReactJs en CoderHouse
 
-Este proyecto fue iniciado con [Create React App](https://github.com/facebook/create-react-app).
+* **Estudiante:** Jeremias Tardivo
+* **LinkedIn:** https://www.linkedin.com/in/jeremias-tardivo/
+* **GitHub:** https://github.com/JereTardivo
+
+
+* **Curso:** React / Coderhouse
+* **Comisión:** 31160
+* **Profesor:** Adrián Escalante
+* **Tutor:** Andres Pujol
+
+
+* **Repositorio proyecto final:** https://github.com/JereTardivo/classics-tardivo.git
+* **Deploy:** 
+
 
 ## Idea del Proyecto
 

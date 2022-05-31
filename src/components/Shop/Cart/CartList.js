@@ -1,20 +1,10 @@
-import React, { useEffect, useState } from 'react'
 import { useCartContext } from '../../../context/CartContext'
 import Cart from './Cart'
+import { Link } from 'react-router-dom'
 
 const CartList = () => {
 
-  const { cart, deleteCart } = useCartContext()
-
-  const [total, setTotal] = useState(0)
-
-  useEffect(() => {
-    let t = 0
-    for (let i = 0; i < cart.length; i++) {
-      t = t + (cart[i].price * cart[i].quantity)
-    }
-    setTotal(t);
-  }, [cart])
+  const { cart, deleteCart, total } = useCartContext()  
 
   return (
     <>
@@ -65,12 +55,13 @@ const CartList = () => {
                   <th></th>
                   <th></th>
                   <td><div className='text-base' >Total</div></td>
-                  <td><div className='text-base'>$ {total}</div></td>
-                  <th><button className="btn btn-success btn-md">Finalizar Compra</button></th>
+                  <td><div className='text-base'>$ {total()}</div></td>
+                  <th><Link to="/sale" className="btn btn-success btn-md">Finalizar Compra</Link></th>
                 </tr>
               </tfoot>
 
             </table>
+            
           </div>
         </>
       }

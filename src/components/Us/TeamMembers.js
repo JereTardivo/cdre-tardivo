@@ -16,7 +16,7 @@ const TeamMembers = () => {
               <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Jeremias Tardivo</h1>
               <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">CEO</p>
               <div className="flex mt-3 -mx-2">
-                <a href="/#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
+                <a href="/us" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
                   <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -24,7 +24,7 @@ const TeamMembers = () => {
                     </path>
                   </svg>
                 </a>
-                <a href="/#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                <a href="/us" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
                   aria-label="Facebook">
                   <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +33,7 @@ const TeamMembers = () => {
                     </path>
                   </svg>
                 </a>
-                <a href="/#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
+                <a href="/us" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
                   <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -48,7 +48,7 @@ const TeamMembers = () => {
               <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Jeff Bezos</h1>
               <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">CMO</p>
               <div className="flex mt-3 -mx-2">
-                <a href="/#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
+                <a href="/us" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
                   <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -56,7 +56,7 @@ const TeamMembers = () => {
                     </path>
                   </svg>
                 </a>
-                <a href="/#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                <a href="/us" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
                   aria-label="Facebook">
                   <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +65,7 @@ const TeamMembers = () => {
                     </path>
                   </svg>
                 </a>
-                <a href="/#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
+                <a href="/us#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
                   <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -80,7 +80,7 @@ const TeamMembers = () => {
               <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Steve Wozniak</h1>
               <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Software Engineer</p>
               <div className="flex mt-3 -mx-2">
-                <a href="/#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
+                <a href="/us" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
                   <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -88,7 +88,7 @@ const TeamMembers = () => {
                     </path>
                   </svg>
                 </a>
-                <a href="/#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                <a href="/us" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
                   aria-label="Facebook">
                   <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -97,7 +97,7 @@ const TeamMembers = () => {
                     </path>
                   </svg>
                 </a>
-                <a href="/#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
+                <a href="/us" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
                   <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -112,7 +112,7 @@ const TeamMembers = () => {
               <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Jeniffer Aniston</h1>
               <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Human Resources</p>
               <div className="flex mt-3 -mx-2">
-                <a href="/#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
+                <a href="/us" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
                   <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -120,7 +120,7 @@ const TeamMembers = () => {
                     </path>
                   </svg>
                 </a>
-                <a href="/#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                <a href="/us" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
                   aria-label="Facebook">
                   <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -129,7 +129,7 @@ const TeamMembers = () => {
                     </path>
                   </svg>
                 </a>
-                <a href="/#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
+                <a href="/us" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
                   <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path

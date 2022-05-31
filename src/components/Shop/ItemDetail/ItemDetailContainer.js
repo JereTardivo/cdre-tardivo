@@ -1,6 +1,7 @@
 import { collection, getDocs, getFirestore } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import Wait from '../../Wait'
 import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
@@ -38,9 +39,14 @@ const ItemDetailContainer = () => {
                     gridColumn: "2/6",
                     gridRow: 4
                 }}>
-                    {item && item.map((item) => (
+                    {item ? (item && item.map((item) => (
                         <ItemDetail key={item.id} item={item} />
-                    ))}
+                    ))) : <Wait />
+
+
+
+                    }
+
                 </div>
             </div>
         </>
