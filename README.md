@@ -12,7 +12,7 @@
 
 
 * **Repositorio proyecto final:** https://github.com/JereTardivo/classics-tardivo.git
-* **Deploy:** 
+* **Deploy:** https://classics-tardivo.vercel.app/
 
 
 ## Idea del Proyecto
