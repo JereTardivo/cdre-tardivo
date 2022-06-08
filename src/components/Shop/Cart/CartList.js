@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const CartList = () => {
 
-  const { cart, deleteCart, total } = useCartContext()  
+  const { cart, deleteCart, total } = useCartContext()
 
   return (
     <>
@@ -21,50 +21,39 @@ const CartList = () => {
         </>
         :
         <>
-          <div className="overflow-x-auto w-full">
-            <table className="table w-full">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                </tr>
-              </thead>
-            </table>
+          <div className='flex justify-center content-center '>
+            <div className="flex flex-col max-w-3xl p-6 space-y-4  sm:p-10 dark:bg-gray-900 dark:text-gray-100">
+              <h2 className="text-xl font-semibold">Detalle de su Orden</h2>
+              <ul className="flex flex-col divide-y divide-gray-700">
+
+                {cart.map((item) => (
+                  <Cart key={item.id} item={item} />
+                ))}
+
+              </ul>
+              <div className="space-y-1 text-right">
+                <p>Total:
+                  <span className="font-semibold">$ {total()}</span>
+                </p>
+                <p className="text-sm">Incluye el costo de envio</p>
+              </div>
+              <div className="flex justify-end space-x-4">
+                <Link to="/" type="button" className="px-6 py-2 border rounded-md">
+                  <span className="sr-only sm:not-sr-only">Volver al Shop</span>
+                </Link>
+                <button onClick={deleteCart} type="button" className="btn btn-error px-6 py-2 border rounded-md">
+                  <span className="sr-only sm:not-sr-only">Vaciar Carrito</span>
+                </button>
+                <Link to="/sale" type="button" className="btn btn-success px-6 py-2 border rounded-md ">
+                  <span className="sr-only sm:not-sr-only">Finalizar Orden</span>
+                </Link>
+              </div>
+              <div className="flex justify-end space-x-4">
+
+              </div>
+            </div>
           </div>
-          <div className="overflow-x-auto w-full">
-            <table className="table w-full">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Articulos</th>
-                  <th>Datos Articulo</th>
-                  <th>Precio Unitario</th>
-                  <th>Precio Total</th>
-                  <th></th>
-                </tr>
-              </thead>
-
-              {cart.map((item) => (
-                <Cart key={item.id} item={item} />
-              ))}
-
-              <tfoot>
-                <tr>
-                  <th><button onClick={deleteCart} className="btn btn-warning">Vaciar Carrito</button></th>
-                  <th></th>
-                  <th></th>
-                  <td><div className='text-base' >Total</div></td>
-                  <td><div className='text-base'>$ {total()}</div></td>
-                  <th><Link to="/sale" className="btn btn-success btn-md">Finalizar Compra</Link></th>
-                </tr>
-              </tfoot>
-
-            </table>
-            
-          </div>
-        </>
-      }
+        </>}
 
     </>
   )
