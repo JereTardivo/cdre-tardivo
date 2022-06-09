@@ -24,7 +24,7 @@ const ItemCount = ({ stock, onAdd, id }) => {
     const handleClick = (id, cantidad) => {
         const findItem = items.find((item) => item.id === id)
 
-        if(!findItem){
+        if (!findItem) {
             alert('Error en BD')
         }
 
@@ -46,15 +46,15 @@ const ItemCount = ({ stock, onAdd, id }) => {
         </div>
         <div className="flex space-x-4 mb-5 text-sm font-medium">
             <div className="flex-auto flex space-x-4">
-                <button onClick={() => { handleClick(id, count) }} className="h-10 px-6 font-semibold rounded-full border border-slate-200 text-slate-900" type="button">
+                <button onClick={() => { handleClick(id, count) }} className="inline-block flex-1 sm:flex-none bg-red-500 hover:bg-red-600 active:bg-indigo-700 focus-visible:ring ring-red-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3" type="button">
                     Añadir al Carrito
                 </button>
             </div>
-            <button className="flex-none flex items-center justify-center w-9 h-9 rounded-full text-red-600 bg-red-50" type="button" aria-label="Like">
-                <svg width="20" height="20" fill="currentColor" aria-hidden="true">
-                    <path fillRule="evenodd" clipRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+            <a href="/#" class="inline-block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-4 py-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
-            </button>
+            </a>
         </div>
 
 

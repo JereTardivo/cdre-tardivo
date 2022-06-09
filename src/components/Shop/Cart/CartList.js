@@ -22,7 +22,7 @@ const CartList = () => {
         :
         <>
           <div className='flex justify-center content-center '>
-            <div className="flex flex-col max-w-3xl p-6 space-y-4  sm:p-10 dark:bg-gray-900 dark:text-gray-100">
+            <div className="flex flex-col max-w-3xl p-6 space-y-4  sm:p-10">
               <h2 className="text-xl font-semibold">Detalle de su Orden</h2>
               <ul className="flex flex-col divide-y divide-gray-700">
 
@@ -37,19 +37,16 @@ const CartList = () => {
                 </p>
                 <p className="text-sm">Incluye el costo de envio</p>
               </div>
-              <div className="flex justify-end space-x-4">
-                <Link to="/" type="button" className="px-6 py-2 border rounded-md">
-                  <span className="sr-only sm:not-sr-only">Volver al Shop</span>
+              <div className="flex justify-center space-x-4">
+                <Link to="/" type="button" className="btn px-6 py-2 border rounded-md">
+                  <span>Volver al Shop</span>
                 </Link>
                 <button onClick={deleteCart} type="button" className="btn btn-error px-6 py-2 border rounded-md">
-                  <span className="sr-only sm:not-sr-only">Vaciar Carrito</span>
+                  <span>Vaciar Carrito</span>
                 </button>
-                <Link to="/sale" type="button" className="btn btn-success px-6 py-2 border rounded-md ">
-                  <span className="sr-only sm:not-sr-only">Finalizar Orden</span>
+                <Link to="/sale" type="button" className="btn btn-success px-6 py-2 border rounded-md">
+                  <span>Finalizar Orden</span>
                 </Link>
-              </div>
-              <div className="flex justify-end space-x-4">
-
               </div>
             </div>
           </div>
